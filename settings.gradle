@@ -1,0 +1,25 @@
+enableFeaturePreview("VERSION_CATALOGS")
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
+rootProject.name = 'date-notify'
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        libs {
+            //mybatis-plus
+            alias('mybatis-plus').to('com.baomidou:mybatis-plus-boot-starter:3.4.2')
+
+            //lombok
+            alias('lombok').to('org.projectlombok:lombok:1.18.20')
+
+            //swagger
+            alias('swagger').to('io.springfox:springfox-boot-starter:3.0.0')
+//            alias('swagger-annotation').to('io.swagger:swagger-annotations:2.1.11')
+//            alias('swagger-models').to('io.swagger:swagger-models:1.5.22')
+            version('jwt', '0.11.2')
+            alias('jwt-api').to('io.jsonwebtoken', 'jjwt-api').versionRef('jwt')
+            alias('jwt-impl').to('io.jsonwebtoken', 'jjwt-impl').versionRef('jwt')
+            alias('jwt-jackson').to('io.jsonwebtoken', 'jjwt-jackson').versionRef('jwt')
+        }
+    }
+}
