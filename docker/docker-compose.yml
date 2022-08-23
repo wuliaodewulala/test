@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  datenotify:
+    build:
+      context:  ./
+      dockerfile: Dockerfile
+    image: datenotify:v1.0.0
+    container_name: datenotify
+    ports:
+      - 6060:6060
