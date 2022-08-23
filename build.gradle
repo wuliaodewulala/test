@@ -34,3 +34,6 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+tasks.withType(Jar) {
+    destinationDir = file("$rootDir/build/")      //$rootDir 取项目的顶级目录
+}
